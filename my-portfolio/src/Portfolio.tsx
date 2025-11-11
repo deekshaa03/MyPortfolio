@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from "react";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  ExternalLink,
-} from "lucide-react";
+import { useState, useEffect } from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
+
 import styles from "./PortfolioNew.module.css";
 
 import DeekshaImg from "./assets/Deeksha_Kotian.jpg";
