@@ -11,6 +11,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Responsive font scaling */
+  font-size: clamp(14px, 2vw, 18px);
 }
 
 a {
@@ -23,23 +26,27 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;   /* responsive */
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding: 1rem;
+  padding-right: 20%;            /* padding for small screens */
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: clamp(2rem, 6vw, 3.2rem); /* responsive heading */
   line-height: 1.1;
+  text-align: center;                   /* better for mobile */
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -54,6 +61,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Light mode */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +72,25 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* 📱 EXTRA MOBILE RESPONSIVE STYLING */
+@media (max-width: 480px) {
+  body {
+    padding: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.8em;
+  }
+}
+
+/* 📲 Tablets */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem;
   }
 }
