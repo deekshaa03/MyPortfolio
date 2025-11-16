@@ -222,7 +222,6 @@ const PortfolioNew = () => {
         {/* Certificates */}
         <section id="certificates" className={styles.section}>
           <h2>Certificates</h2>
-          <p>Notable achievements and certifications.</p>
           <div className={styles.certificatesGrid}>
             {certificates.map(({ title, img }) => (
               <div key={title} className={styles.certificateCard}>
